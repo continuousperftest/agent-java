@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [[ $TRAVIS_EVENT_TYPE == “push” ]] && [[ $TRAVIS_BRANCH == “master” ]] && [[ $TRAVIS_PULL_REQUEST == “false” ]]
+if [[ $TRAVIS_EVENT_TYPE == "push" ]] && [[ $TRAVIS_BRANCH == "master" ]] && [[ $TRAVIS_PULL_REQUEST == "false" ]]
 then
     echo "before_deploy.sh is running!"
 
