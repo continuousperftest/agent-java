@@ -24,7 +24,6 @@ deploy:
     overwrite: true
     draft: true
     on:
-        tags: true
         repo: continuousperftest/agent-java
         branch: master
         condition: $TRAVIS_BRANCH = master
