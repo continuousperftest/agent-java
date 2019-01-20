@@ -1,14 +1,15 @@
 package com.github.continuousperftest.queue;
 
+import com.github.continuousperftest.TestDataGenerator;
+import com.github.continuousperftest.entity.domain.Perfomance;
+import com.github.continuousperftest.queue.impl.PerfomanceMetricQueue;
 import java.util.List;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
-import com.github.continuousperftest.TestDataGenerator;
-import com.github.continuousperftest.entity.domain.Perfomance;
-import com.github.continuousperftest.queue.MetricQueue;
-import com.github.continuousperftest.queue.impl.PerfomanceMetricQueue;
 
+@Ignore("It is ignored since it generates data that is result of real files on file system due to the logic inside TestNgExecutionListener.")
 public class MetricQueueTest {
 
   private List<Perfomance> expMetrics;
