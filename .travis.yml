@@ -3,10 +3,6 @@ jdk:
     - oraclejdk8
 
 before_install:
-    - echo $TRAVIS_BRANCH
-    - echo $GPG_SECRET_KEYS
-    - echo $GPG_SECRET_KEYS | base64 --decode
-    - echo $GPG_EXECUTABLE
     - echo $GPG_SECRET_KEYS | base64 --decode | $GPG_EXECUTABLE --import
     - echo $GPG_OWNERTRUST | base64 --decode | $GPG_EXECUTABLE --import-ownertrust
 
@@ -15,19 +11,21 @@ install:
 
 script: .travis/build.sh
 
-before_deploy:
-   - mvn help:evaluate -N -Dexpression=project.version|grep -v '\['
-   - export project_version=$(mvn help:evaluate -N -Dexpression=project.version|grep -v '\[')
+before_deploy: .travis/before_deploy.sh
 
 deploy:
     provider: releases
     api_key: $GITHUB_OAUTH_TOKEN
     file:
-        - target/agent-java-$project_version.jar
-        - target/agent-java-$project_version-javadoc.jar
-        - target/agent-java-$project_version-sources.jar
+        - target/agent-java-$PROJECT_VERSION.jar
+        - target/agent-java-$PROJECT_VERSION-javadoc.jar
+        - target/agent-java-$PROJECT_VERSION-sources.jar
     skip_cleanup: true
+    overwrite: true
+    draft: true
     on:
-        branch: release
+        tags: true
         repo: continuousperftest/agent-java
-    name: $project_version
+        branch: master
+        condition: $TRAVIS_BRANCH = master
+    name: $PROJECT_VERSION

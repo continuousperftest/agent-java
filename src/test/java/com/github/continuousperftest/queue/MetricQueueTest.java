@@ -9,7 +9,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
-@Ignore("")
+@Ignore("It is ignored since it generates data that is result of real files on file system due to the logic inside TestNgExecutionListener.")
 public class MetricQueueTest {
 
   private List<Perfomance> expMetrics;
