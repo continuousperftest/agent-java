@@ -27,4 +27,3 @@ deploy:
         repo: continuousperftest/agent-java
         branch: master
         condition: $TRAVIS_BRANCH = master
-    name: $PROJECT_VERSION
