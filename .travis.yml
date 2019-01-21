@@ -17,9 +17,10 @@ deploy:
     provider: releases
     api_key: $GITHUB_OAUTH_TOKEN
     file:
-        - target/agent-java-$PROJECT_VERSION.jar
-        - target/agent-java-$PROJECT_VERSION-javadoc.jar
-        - target/agent-java-$PROJECT_VERSION-sources.jar
+        - target/agent-java-{$PROJECT_VERSION}.jar
+        - target/agent-java-{$PROJECT_VERSION}-javadoc.jar
+        - target/agent-java-{$PROJECT_VERSION}-sources.jar
+    name: $PROJECT_VERSION
     skip_cleanup: true
     overwrite: true
     draft: true
