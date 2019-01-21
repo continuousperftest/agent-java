@@ -14,7 +14,6 @@ then
     git config --local user.name "CI"
     git config --local user.email "oleg.strunevskiy@gmail.com"
     git tag $TRAVIS_TAG
-    git push origin $TRAVIS_TAG
 else
     echo "before_deploy.sh is skiped!"
 fi
