@@ -31,12 +31,12 @@ We are really pleased to see you interested in contributing.
 * Ask any question about how to use continuous perf test using [email](oleg.strunevskiy@gmail.com).
 
 
-#### **Code formatting
+#### **Code formatting**
 
 * The whole project is using the same code formatter that is based on [google code formatter](https://github.com/google/google-java-format) and could be found [here](https://github.com/continuousperftest/continuousperftest/tree/master/formatting-profile)
 
 
-#### **Review Then Commit
+#### **Review Then Commit**
 
 * Currently we follow Review Then Commit (RTC) philosophy
 
