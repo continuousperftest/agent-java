@@ -12,9 +12,7 @@
 
 ## About the Continuous Perf Test
 
-The objective of the project is to measure performance of HTTP calls handling that are emitted from test frameworks made using HTTP clients and xUnit frameworks to give Quality Assurance Engineers an idea of how a system under test (web service) operates from performance standpoint from a release to a release while running a suite of functional automated tests against the system under test.
-
-If you would like to read more about Continuous Perf Test, please follow [link](https://www.linkedin.com/pulse/continuous-perf-test-aleh-struneuski)
+Continuous Perf Test is about measuring performance of HTTP calls handling that are emitted from test frameworks made using HTTP clients and xUnit frameworks to give Quality Assurance Engineers an idea of how a system under test (web service) operates from performance standpoint from a release to a release while running a suite of functional automated tests against the system under test. The detailed information about Continuous Perf Test could be found [here](https://www.linkedin.com/pulse/continuous-perf-test-aleh-struneuski).
 
 
 ## Dependencies:
@@ -42,4 +40,4 @@ Please read [CONTRIBUTING.md](https://github.com/continuousperftest/agent-java/b
 
 ## License
 
-This project is licensed under the GPL-3.0 License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the GPL-3.0 License - see the [LICENSE.md](https://github.com/continuousperftest/agent-java/blob/master/LICENSE) file for details
