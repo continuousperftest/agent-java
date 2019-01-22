@@ -42,5 +42,9 @@ We are really pleased to see you interested in contributing.
 
 * With collected respect, top contributors will be granted as gate keepers, to be able to make commits without review. And review commits of other contributors.
 
+#### **How to release Continuous Perf Test?**
+
+* The description of how releases happen are documented [here](https://github.com/continuousperftest/agent-java/blob/master/RELEASE.md)
+
 
 Thanks!
