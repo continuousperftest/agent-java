@@ -9,6 +9,10 @@
   - [Dependency](https://github.com/continuousperftest/agent-java#dependency)
   - [Surefire Plugin](https://github.com/continuousperftest/agent-java#surefire-plugin)
 - [Launch parameters](https://github.com/continuousperftest/agent-java#launch-parameters)
+  - [Exporter](https://github.com/continuousperftest/agent-java#exporter)
+  	- [Local](https://github.com/continuousperftest/agent-java#local)
+  	- [Remote](https://github.com/continuousperftest/agent-java#remote)
+  	- [Opted](https://github.com/continuousperftest/agent-java#opted)
 - [Released versions](https://github.com/continuousperftest/agent-java/blob/master/CHANGES.md)
 ---
 
@@ -93,6 +97,18 @@ If you are running automated tests using `maven surefire plugin`, it is required
 Launch parameters can be set using the following ways depending upon how you launch your automated tests:
 -	If you use Maven to run your automated tests you can utilize `Maven CLI option` such as `-D` to set values to parameters, for instance, `mvn clean test -Dperf-test.isEnabled=true -Dperf-test.exporter=local`
 -	If you launch your automated tests as a java application, please make sure that launch parameters are defined as system properties
+
+### Exporter
+
+#### Local
+
+#### Remote
+
+#### Opted
+
+##### Code example of how to implement your own exporter
+
+##### Using ServiceLoader to register the implemented exporter
 
 
 ## Contributing
