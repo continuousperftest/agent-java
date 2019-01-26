@@ -27,7 +27,7 @@ As of now, Continuous Perf Test agent supports the following HTTP clients and xU
 -	xUnit frameworks:
 	- 	[TestNG, version 6.X.X](https://testng.org/doc/index.html)
 
-If you would like to utilize the library and something needed by you is not supported yet, feel free to request it using [github issues tracker](https://github.com/continuousperftest/agent-java/issues)
+If you would like to utilize the library and something needed is not supported yet, feel free to request it using [github issues tracker](https://github.com/continuousperftest/agent-java/issues)
 
 
 ## Maven:
@@ -82,7 +82,17 @@ If you are running automated tests using `maven surefire plugin`, it is required
 
 ## Launch parameters
 
-It will be updated soon.
+| 	      **Options**      		|       **Default value**       |        						**Description**        		                   |
+|-------------------------------|-------------------------------|------------------------------------------------------------------------------|
+| perf-test.isEnabled    		|false - {true, false}          |Turns on metrics collection if true is specified							   |
+| perf-test.exporter     		|local - {local, remote, opted} |Chooses a mode for reporting collected metric   							   |
+| perf-test.results.host 		|http://127.0.0.1:8095          |Host where collected metrics are sent to if the exporter is set to remote     |                  
+| perf-test.results.directory   |perf-test-results              |Folder name where collected metrics are stored if the exporter is set to local|  
+
+
+Launch parameters can be set using the following ways depending upon how you launch your automated tests:
+-	If you use Maven to run your automated tests you can utilize `Maven CLI option` such as `-D` to set values to parameters, for instance, `mvn clean test -Dperf-test.isEnabled=true -Dperf-test.exporter=local`
+-	If you launch your automated tests as a java application, please make sure that launch parameters are defined as system properties
 
 
 ## Contributing
