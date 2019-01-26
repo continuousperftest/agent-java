@@ -27,7 +27,7 @@ As of now, Continuous Perf Test agent supports the following HTTP clients and xU
 -	xUnit frameworks:
 	- 	[TestNG, version 6.X.X](https://testng.org/doc/index.html)
 
-If you would like to utilize the library and something needed by you is not supported yet, feel free to request it using (github issues tracker)[https://github.com/continuousperftest/agent-java/issues]
+If you would like to utilize the library and something needed by you is not supported yet, feel free to request it using [github issues tracker](https://github.com/continuousperftest/agent-java/issues)
 
 
 ## Maven:
@@ -49,10 +49,10 @@ Add to `POM.xml`
 If you are running automated tests using `maven surefire plugin`, it is required to update `maven-surefire-plugin` section in `POM.xml`
 
 ```xml
-	<properties>
-		<maven-surefire-plugin>2.9</maven-surefire-plugin>
-		<aspectj.version>1.8.13</aspectj.version>
-	</properties>
+<properties>
+	<maven-surefire-plugin>2.9</maven-surefire-plugin>
+	<aspectj.version>1.8.13</aspectj.version>
+</properties>
 	
 <plugins>
     [...]
