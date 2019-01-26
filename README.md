@@ -6,8 +6,8 @@
 - [About the Continuous Perf Test](https://github.com/continuousperftest/agent-java#about-the-continuous-perf-test)
 - [Support](https://github.com/continuousperftest/agent-java#support)
 - [Maven](https://github.com/continuousperftest/agent-java#maven)
-  - [Dependency](https://github.com/reportportal/agent-java-testNG#dependency)
-  - [Surefire Plugin](https://github.com/reportportal/agent-java-testNG#surefire-plugin)
+  - [Dependency](https://github.com/continuousperftest/agent-java#dependency)
+  - [Surefire Plugin](https://github.com/continuousperftest/agent-java#surefire-plugin)
 - [Launch parameters](https://github.com/continuousperftest/agent-java#launch-parameters)
 - [Released versions](https://github.com/continuousperftest/agent-java/blob/master/CHANGES.md)
 ---
@@ -82,7 +82,7 @@ If you are running automated tests using `maven surefire plugin`, it is required
 
 ## Launch parameters
 
-| 	      **Options**      		|       **Default value**       |        						**Description**        		                   |
+| 	      **Parameters**      	|       **Default value**       |        						**Description**        		                   |
 |-------------------------------|-------------------------------|------------------------------------------------------------------------------|
 | perf-test.isEnabled    		|false - {true, false}          |Turns on metrics collection if true is specified							   |
 | perf-test.exporter     		|local - {local, remote, opted} |Chooses a mode for reporting collected metric   							   |
