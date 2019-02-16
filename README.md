@@ -13,6 +13,7 @@
   	- [Local](https://github.com/continuousperftest/agent-java#local)
   	- [Remote](https://github.com/continuousperftest/agent-java#remote)
   	- [Opted](https://github.com/continuousperftest/agent-java#opted)
+- [UI application](https://github.com/continuousperftest/agent-java#ui-application)
 - [Released versions](https://github.com/continuousperftest/agent-java/blob/master/CHANGES.md)
 ---
 
@@ -100,15 +101,62 @@ Launch parameters can be set using the following ways depending upon how you lau
 
 ### Exporter
 
+Exporter parameter is used to set an exporting strategy that will be used to send collected performance metrics to its final store. There are three options available.
+
 #### Local
+
+Specifying the following Maven argument `-Dperf-test.exporter=local`, collected performance metrics will be stored to a folder from which tests are launched.
+This folder, by default, is `perf-test-results`, but this folder can be changed using the following Maven argument `perf-test.results.directory`.
 
 #### Remote
 
+- Using this option, namely `-Dperf-test.exporter=remote`, collected performance metrics will be sent to a remote storage so that metrics can be analyzed after several test launches to observer performance trends later on.
+
+- Continuous Perf Test is delivered with both `the remote storage and UI application` for demonstration purpose.
+
+- [The UI application](http://52.202.21.1) serves as a dashboard where performance trends can be seen based on collected performance metrics by Continuous Perf Test agent.
+
+Note: All the data (performance metrics) saved in the remote storage is cleaned once per week.
+
 #### Opted
+
+If you would like to use your own exporter for collecting performance metrics, it is required to specify the following Maven argument `-Dperf-test.exporter=opted`.
+Besides, you are expected to implement the following interface in your project `com.github.continuousperftest.service.MetricExporterService` and register the implemented exported using ServiceLoader.
 
 ##### Code example of how to implement your own exporter
 
+```java
+import com.github.continuousperftest.entity.domain.Perfomance;
+import com.github.continuousperftest.service.MetricExporterService;
+import java.util.List;
+
+public class YourOwnExporterServiceImpl implements MetricExporterService {
+
+  @Override
+  public void export(List<Perfomance> metrics) {
+
+    // save a list of Performance object
+
+  }
+
+}
+```
+
 ##### Using ServiceLoader to register the implemented exporter
+
+You can use service loaded mechanism for adding your exporter to the Continuous Perf Test agent. JDK offers a very elegant mechanism to specify implementations of interfaces on the class path via the ServiceLoader class. With ServiceLoader, all you need to do to register implemented exporter is the implementation of your exporter in your project and a configuration file. When you run tests, the Continuous Perf Test agent will automatically find your implementation of your exporter. 
+
+To register the implemented exported, the following steps are to be done:
+- Create the folder `META-INF/services` in the `src/main/resources` folder;
+- Create a file that is called `com.github.continuousperftest.service.MetricExporterService` inside the `META-INF/services` folder;
+- Write full name of the implemented exporter in the first line, for instance:  packge.where.your.exporter.is.placed.YourOwnExporterServiceImpl.
+
+
+## UI application
+
+- The application is hosted using the following [host](http://52.202.21.1)
+
+- To use the dashboard that the Continuous Perf Test agent is delivered with, it is required to run tests using TestNG groups since charts are built by selecting data for charts based on TestNG groups and threads tests were launched
 
 
 ## Contributing
