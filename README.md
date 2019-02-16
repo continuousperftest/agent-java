@@ -156,7 +156,7 @@ To register the implemented exported, the following steps are to be done:
 
 - The application is hosted using the following [host](http://52.202.21.1)
 
-- To use the dashboard that the Continuous Perf Test agent is delivered with, it is required to run tests using TestNG groups since charts are built by selecting data for charts based on TestNG groups and threads tests were launched
+- To use the dashboard that the Continuous Perf Test agent is delivered with, it is required to run tests using TestNG groups since charts are built by selecting data for charts based on TestNG groups and a number of threads that tests were launched in.
 
 
 ## Contributing
