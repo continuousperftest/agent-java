@@ -64,7 +64,7 @@
 		<maven-source-plugin.version>3.0.1</maven-source-plugin.version>
 		<nexus-staging-maven-plugin.version>1.6.7</nexus-staging-maven-plugin.version>
 		<maven-surefire-plugin>2.9</maven-surefire-plugin>
-		<checkstyle.version>8.15</checkstyle.version>
+		<checkstyle.version>8.18</checkstyle.version>
 		<checkstyle.plugin.version>3.0.0</checkstyle.plugin.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<aspectj.version>1.8.13</aspectj.version>
