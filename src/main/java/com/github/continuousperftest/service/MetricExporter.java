@@ -27,5 +27,6 @@ package com.github.continuousperftest.service;
 public enum MetricExporter {
   LOCAL, REMOTE, OPTED;
 
-  MetricExporter() {}
+  MetricExporter() {
+  }
 }

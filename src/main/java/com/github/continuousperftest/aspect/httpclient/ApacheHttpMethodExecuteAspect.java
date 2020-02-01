@@ -47,7 +47,8 @@ import org.aspectj.lang.annotation.Pointcut;
 public class ApacheHttpMethodExecuteAspect extends HttpMethodExecuteAspect {
 
   @Pointcut("execution(* org.apache.http.impl.client.CloseableHttpClient.doExecute(..))")
-  public void doExecute() {}
+  public void doExecute() {
+  }
 
   @Around("doExecute()")
   public Object httpMethodExecution(ProceedingJoinPoint joinPoint) throws Throwable {
